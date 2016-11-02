@@ -1,0 +1,385 @@
+/**
+ * Small
+ */
+
+@include mq() {
+    .show-for-small-only,
+    .show-for-small-up,
+    .hide-for-medium-only,
+    .hide-for-medium-up,
+    .hide-for-large-only,
+    .hide-for-large-up,
+    .hide-for-xlarge-only,
+    .hide-for-xlarge-up,
+    .hide-for-xxlarge-only,
+    .hide-for-xxlarge-up {
+        display: inherit !important;
+    }
+
+    .hide-for-small-only,
+    .hide-for-small-up,
+    .show-for-medium-only,
+    .show-for-medium-up,
+    .show-for-large-only,
+    .show-for-large-up,
+    .show-for-xlarge-only,
+    .show-for-xlarge-up,
+    .show-for-xxlarge-only,
+    .show-for-xxlarge-up {
+        display: none !important;
+    }
+
+    .visible-for-small-only,
+    .visible-for-small-up,
+    .hidden-for-medium-only,
+    .hidden-for-medium-up,
+    .hidden-for-large-only,
+    .hidden-for-large-up,
+    .hidden-for-xlarge-only,
+    .hidden-for-xlarge-up,
+    .hidden-for-xxlarge-only,
+    .hidden-for-xxlarge-up {
+        @include element-invisible-off;
+    }
+
+    .hidden-for-small-only,
+    .hidden-for-small-up,
+    .visible-for-medium-only,
+    .visible-for-medium-up,
+    .visible-for-large-only,
+    .visible-for-large-up,
+    .visible-for-xlarge-only,
+    .visible-for-xlarge-up,
+    .visible-for-xxlarge-only,
+    .visible-for-xxlarge-up {
+        @include element-invisible;
+    }
+}
+
+/**
+ * Medium
+ */
+
+@include mq($from: medium) {
+    .hide-for-small-only,
+    .show-for-small-up,
+    .show-for-medium-only,
+    .show-for-medium-up,
+    .hide-for-large-only,
+    .hide-for-large-up,
+    .hide-for-xlarge-only,
+    .hide-for-xlarge-up,
+    .hide-for-xxlarge-only,
+    .hide-for-xxlarge-up {
+        display: inherit !important;
+    }
+
+    .show-for-small-only,
+    .hide-for-small-up,
+    .hide-for-medium-only,
+    .hide-for-medium-up,
+    .show-for-large-only,
+    .show-for-large-up,
+    .show-for-xlarge-only,
+    .show-for-xlarge-up,
+    .show-for-xxlarge-only,
+    .show-for-xxlarge-up {
+        display: none !important;
+    }
+
+    .hidden-for-small-only,
+    .visible-for-small-up,
+    .visible-for-medium-only,
+    .visible-for-medium-up,
+    .hidden-for-large-only,
+    .hidden-for-large-up,
+    .hidden-for-xlarge-only,
+    .hidden-for-xlarge-up,
+    .hidden-for-xxlarge-only,
+    .hidden-for-xxlarge-up {
+        @include element-invisible-off;
+    }
+
+    .visible-for-small-only,
+    .hidden-for-small-up,
+    .hidden-for-medium-only,
+    .hidden-for-medium-up,
+    .visible-for-large-only,
+    .visible-for-large-up,
+    .visible-for-xlarge-only,
+    .visible-for-xlarge-up,
+    .visible-for-xxlarge-only,
+    .visible-for-xxlarge-up {
+        @include element-invisible;
+    }
+}
+
+/**
+ * Large
+ */
+
+@include mq($from: large) {
+    .hide-for-small-only,
+    .show-for-small-up,
+    .hide-for-medium-only,
+    .show-for-medium-up,
+    .show-for-large-only,
+    .show-for-large-up,
+    .hide-for-xlarge-only,
+    .hide-for-xlarge-up,
+    .hide-for-xxlarge-only,
+    .hide-for-xxlarge-up {
+        display: inherit !important;
+    }
+
+    .show-for-small-only,
+    .hide-for-small-up,
+    .show-for-medium-only,
+    .hide-for-medium-up,
+    .hide-for-large-only,
+    .hide-for-large-up,
+    .show-for-xlarge-only,
+    .show-for-xlarge-up,
+    .show-for-xxlarge-only,
+    .show-for-xxlarge-up {
+        display: none !important;
+    }
+
+    .hidden-for-small-only,
+    .visible-for-small-up,
+    .hidden-for-medium-only,
+    .visible-for-medium-up,
+    .visible-for-large-only,
+    .visible-for-large-up,
+    .hidden-for-xlarge-only,
+    .hidden-for-xlarge-up,
+    .hidden-for-xxlarge-only,
+    .hidden-for-xxlarge-up {
+        @include element-invisible-off;
+    }
+
+    .visible-for-small-only,
+    .hidden-for-small-up,
+    .visible-for-medium-only,
+    .hidden-for-medium-up,
+    .hidden-for-large-only,
+    .hidden-for-large-up,
+    .visible-for-xlarge-only,
+    .visible-for-xlarge-up,
+    .visible-for-xxlarge-only,
+    .visible-for-xxlarge-up {
+        @include element-invisible;
+    }
+}
+
+/**
+ * X-large
+ */
+
+@include mq($from: xlarge) {
+    .hide-for-small-only,
+    .show-for-small-up,
+    .hide-for-medium-only,
+    .show-for-medium-up,
+    .hide-for-large-only,
+    .show-for-large-up,
+    .show-for-xlarge-only,
+    .show-for-xlarge-up,
+    .hide-for-xxlarge-only,
+    .hide-for-xxlarge-up {
+        display: inherit !important;
+    }
+
+    .show-for-small-only,
+    .hide-for-small-up,
+    .show-for-medium-only,
+    .hide-for-medium-up,
+    .show-for-large-only,
+    .hide-for-large-up,
+    .hide-for-xlarge-only,
+    .hide-for-xlarge-up,
+    .show-for-xxlarge-only,
+    .show-for-xxlarge-up {
+        display: none !important;
+    }
+
+    .hidden-for-small-only,
+    .visible-for-small-up,
+    .hidden-for-medium-only,
+    .visible-for-medium-up,
+    .hidden-for-large-only,
+    .visible-for-large-up,
+    .visible-for-xlarge-only,
+    .visible-for-xlarge-up,
+    .hidden-for-xxlarge-only,
+    .hidden-for-xxlarge-up {
+        @include element-invisible-off;
+    }
+
+    .visible-for-small-only,
+    .hidden-for-small-up,
+    .visible-for-medium-only,
+    .hidden-for-medium-up,
+    .visible-for-large-only,
+    .hidden-for-large-up,
+    .hidden-for-xlarge-only,
+    .hidden-for-xlarge-up,
+    .visible-for-xxlarge-only,
+    .visible-for-xxlarge-up {
+        @include element-invisible;
+    }
+}
+
+/**
+ * XX-large
+ */
+
+@include mq($from: xxlarge) {
+    .hide-for-small-only,
+    .show-for-small-up,
+    .hide-for-medium-only,
+    .show-for-medium-up,
+    .hide-for-large-only,
+    .show-for-large-up,
+    .hide-for-xlarge-only,
+    .show-for-xlarge-up,
+    .show-for-xxlarge-only,
+    .show-for-xxlarge-up {
+        display: inherit !important;
+    }
+
+    .show-for-small-only,
+    .hide-for-small-up,
+    .show-for-medium-only,
+    .hide-for-medium-up,
+    .show-for-large-only,
+    .hide-for-large-up,
+    .show-for-xlarge-only,
+    .hide-for-xlarge-up,
+    .hide-for-xxlarge-only,
+    .hide-for-xxlarge-up {
+        display: none !important;
+    }
+
+    .hidden-for-small-only,
+    .visible-for-small-up,
+    .hidden-for-medium-only,
+    .visible-for-medium-up,
+    .hidden-for-large-only,
+    .visible-for-large-up,
+    .hidden-for-xlarge-only,
+    .visible-for-xlarge-up,
+    .visible-for-xxlarge-only,
+    .visible-for-xxlarge-up {
+        @include element-invisible-off;
+    }
+
+    .visible-for-small-only,
+    .hidden-for-small-up,
+    .visible-for-medium-only,
+    .hidden-for-medium-up,
+    .visible-for-large-only,
+    .hidden-for-large-up,
+    .visible-for-xlarge-only,
+    .hidden-for-xlarge-up,
+    .hidden-for-xxlarge-only,
+    .hidden-for-xxlarge-up {
+        @include element-invisible;
+    }
+}
+
+/**
+ * Orientation targeting
+ */
+
+.show-for-landscape,
+.hide-for-portrait {
+    display: inherit !important;
+}
+
+.hide-for-landscape,
+.show-for-portrait {
+    display: none !important;
+}
+
+@include mq($and: '(orientation: landscape)') {
+    .show-for-landscape,
+    .hide-for-portrait {
+        display: inherit !important;
+    }
+
+    .hide-for-landscape,
+    .show-for-portrait {
+        display: none !important;
+    }
+}
+
+@include mq($and: '(orientation: portrait)') {
+    .show-for-portrait,
+    .hide-for-landscape {
+        display: inherit !important;
+    }
+
+    .hide-for-portrait,
+    .show-for-landscape {
+        display: none !important;
+    }
+}
+
+/**
+ * Touch-enabled device targeting
+ */
+
+.show-for-touch {
+    display: none !important;
+}
+
+.hide-for-touch {
+    display: inherit !important;
+}
+
+.touchevents .show-for-touch {
+    display: inherit !important;
+}
+
+.touchevents .hide-for-touch {
+    display: none !important;
+}
+
+/**
+ * Screen reader-specific classes
+ */
+
+.show-for-sr {
+    @include element-invisible;
+}
+
+.show-on-focus {
+    @include element-invisible;
+}
+
+.show-on-focus:focus,
+.show-on-focus:active {
+    @include element-invisible-off;
+}
+
+/**
+ * Print visibility
+ */
+
+.print-only,
+.show-for-print {
+    display: none !important;
+}
+
+@media print {
+    .print-only,
+    .show-for-print {
+        display: block !important;
+    }
+
+    .hide-on-print,
+    .hide-for-print {
+        display: none !important;
+    }
+}

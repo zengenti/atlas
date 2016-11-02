@@ -1,0 +1,32 @@
+/**
+ * Uses the $icons map defined in utilities/_variables.scss
+ * Add your icon into the map and the mixin will do the rest
+ *
+ * If for some reason you don't want to use the icons map you can manually add in an icon, example below
+ * .icon-name {
+ *    font-size: rem-calc(32); // works because "width" & "height" were set on .icon using em units
+ *    color: #ff0000; // works for single-colored icons, because "fill" was set to "currentColor" on .icon
+ * }
+ */
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+/**
+ * Icons
+ */
+
+@include icons;
+
+/**
+ * Icons fallback to PNGs
+ * Uses Modernizr to detect svg support .no-svg
+ * Remove if your not supporting older browsers
+ */
+
+@include icons-fallback;

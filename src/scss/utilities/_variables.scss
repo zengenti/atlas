@@ -1,0 +1,94 @@
+/**
+ * Assets paths
+ */
+
+$path--compile:             "../";
+
+/**
+ * Base
+ */
+
+$base--rem:                 16px !default;
+$base--font-size:           100%; // Typical default browser font-size is 16px
+$base--line-height:         1.4;
+
+/**
+ * Global
+ */
+
+$font-family--sans-serif:   "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family--serif:        Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family--monospace:    Monaco, Consolas, "Liberation Mono", Courier, monospace;
+$font-weight--normal:       normal;
+$font-weight--bold:         bold;
+
+// Descriptive base colors
+$white:                     #fff;
+$mine-shaft:                #222;
+$coral:                     #e9654c;
+$green:                     #74a14c;
+
+// Color usage
+$color-primary:             $coral !default;
+$color-secondary:           $green !default;
+
+// We use these to control various global styles
+$html-bg:                   $white;
+$html-font--color:          $mine-shaft;
+$html-font--family:         $font-family--sans-serif;
+$html-font--weight:         $font-weight--normal;
+$html-font--style:          normal;
+
+// Grid settings
+$row-width:                 rem-calc(1000);
+$column-gutter:             rem-calc(30);
+$total-columns:             12;
+
+// Heading sizes at various breakpoints
+$header-sizes: (
+  small: (
+    'h1': 24,
+    'h2': 20,
+    'h3': 19,
+    'h4': 18,
+    'h5': 17,
+    'h6': 16,
+  ),
+  medium: (
+    'h1': 48,
+    'h2': 40,
+    'h3': 31,
+    'h4': 25,
+    'h5': 20,
+    'h6': 16,
+  ),
+) !default;
+
+/**
+ * Breakpoints
+ * Override default settings from _mq.scss partial
+ * https://github.com/sass-mq/sass-mq
+ */
+
+$mq-breakpoints: (
+  small:   321px,
+  medium:  641px,
+  large:   1025px,
+  xlarge:  1441px,
+  xxlarge: 1921px
+);
+
+// Set the media type
+$mq-media-type: only screen;
+
+// Show the breakpoints in the browser
+// $mq-show-breakpoints: (small, medium, large, xlarge, xxlarge);
+
+/**
+ * Icons
+ */
+
+$icons: (
+  // example1: (size: 100px),
+  // example2: (size: 100px, fallback: white)
+);

@@ -1,0 +1,230 @@
+/**
+ * Grid HTML classes
+ */
+
+@mixin grid-html-classes($size, $breakpoints: $mq-breakpoints) {
+  // Check the size is in our mq-breakpoints map
+  @if map-has-key($breakpoints, $size) {
+    // Push and pull
+    @for $i from 0 through $total-columns - 1 {
+      .#{$size}-push-#{$i} {
+        position: relative;
+        left: column-calc($i);
+        right: auto;
+      }
+
+      .#{$size}-pull-#{$i} {
+        position: relative;
+        right: column-calc($i);
+        left: auto;
+      }
+    }
+
+    // Column
+    @for $i from 1 through $total-columns {
+      .#{$size}-#{$i} {
+        width: column-calc($i);
+      }
+    }
+
+    // Offset
+    @for $i from 0 through $total-columns - 1 {
+      .#{$size}-offset-#{$i} {
+        margin-left: column-calc($i) !important;
+      }
+    }
+
+    // Reset
+    .#{$size}-reset-order {
+      float: left;
+      left: auto;
+      margin-left: 0;
+      margin-right: 0;
+      right: auto;
+    }
+
+    // Centered
+    .column.#{$size}-centered {
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
+
+    .column.#{$size}-uncentered {
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    // Fighting [class*="column"] + [class*="column"]:last-child
+    .column.#{$size}-centered:last-child {
+      float: none;
+    }
+
+    // Fighting .column.<previous-size>-centered:last-child
+    .column.#{$size}-uncentered:last-child {
+      float: left;
+    }
+
+    .column.#{$size}-uncentered.opposite {
+      float: right;
+    }
+
+    // Row
+    .row {
+      &.#{$size}-collapse {
+        > .column {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+      &.#{$size}-uncollapse {
+        > .column {
+          padding-left: ($column-gutter / 2);
+          padding-right: ($column-gutter / 2);
+          float: left;
+        }
+      }
+    }
+  } @else {
+    @warn "Breakpoint #{$size} wasn't found in $breakpoints.";
+  }
+}
+
+/**
+ * Align classes
+ */
+
+@mixin align-classes($size) {
+    .#{$size}-text-left {
+        text-align: left !important;
+    }
+
+    .#{$size}-text-right {
+        text-align: right !important;
+    }
+
+    .#{$size}-text-center {
+        text-align: center !important;
+    }
+
+    .#{$size}-text-justify {
+        text-align: justify !important;
+    }
+}
+
+/**
+ * Vertical align middle
+ */
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/**
+ * Clearfix
+ */
+
+@mixin clearfix {
+    &:before, &:after { content: " "; display: table; }
+    &:after { clear: both; }
+}
+
+/**
+ * Makes an element visually hidden, but accessible
+ * @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+@mixin element-invisible {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+/**
+ * Turns off the element-invisible effect
+ */
+
+@mixin element-invisible-off {
+    position: static !important;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    clip: auto;
+}
+
+/**
+ * RGBA fallback
+ */
+
+@mixin rgba-fallback($color, $opacity: 0.85) {
+    background-color: rgba($color, $opacity);
+
+    .no-rgba & {
+        background-color: $color;
+    }
+}
+
+/**
+ * Input placeholder color
+ */
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder { color: $color; opacity: 1; } // Safari and Chrome
+    &:-moz-placeholder           { color: $color; opacity: 1; } // Firefox 4-18
+    &::-moz-placeholder          { color: $color; opacity: 1; } // Firefox 19+
+    &:-ms-input-placeholder      { color: $color; opacity: 1; } // Internet Explorer 10+
+}
+
+/**
+ * Icons
+ */
+
+@mixin icons {
+    // Loop through the icons map
+    @each $icon, $options in $icons {
+        .icon-#{$icon} {
+            font-size: rem-calc(map-get($options, size));
+        }
+    }
+}
+
+/**
+ * Icons fallback
+ */
+
+@mixin icons-fallback {
+    .no-svg .icon {
+        width: auto;
+        height: auto;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+
+    // Loop through the icons map
+    @each $icon, $options in $icons {
+        $image-path: '#{$path--compile}images/icons/icon-#{$icon}.png';
+
+        // If fallback is specified we want to use a different image for browsers
+        // that don't support svg usually because the base colour isn't suitable.
+        // Ensure you create the png manually as it won't be automatically created
+        @if map-get($options, fallback) {
+            $image-path: '#{$path--compile}images/icons/icon-#{$icon}-#{map-get($options, fallback)}.png';
+        }
+
+        .no-svg .icon-#{$icon} {
+            width: rem-calc(map-get($options, size));
+            height: rem-calc(map-get($options, size));
+            background-image: url('#{$image-path}');
+        }
+    }
+}

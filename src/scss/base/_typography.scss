@@ -1,0 +1,13 @@
+/**
+ * Heading sizes
+ */
+
+@each $size, $headers in $header-sizes {
+    @include mq($size) {
+        @each $header, $font-size in $headers {
+            #{$header} {
+                font-size: rem-calc($font-size);
+            }
+        }
+    }
+}

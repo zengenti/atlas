@@ -1,0 +1,49 @@
+/*
+ * Name: Atlas
+ * Author: Zengenti Ltd
+ * Author URI: http://zengenti.com
+ * Description: A modern front-end framework
+ * Version: 0.0.1
+ */
+
+@charset "UTF-8";
+
+/**
+ * Utilities
+ */
+
+@import "utilities/mixins";
+@import "utilities/functions";
+@import "utilities/variables";
+@import "utilities/mq";
+
+/**
+ * Base
+ * core elements
+ */
+
+@import "base/normalize";
+@import "base/base";
+@import "base/typography";
+
+/**
+ * Components
+ * singular modular items, no parent-child relationship
+ */
+
+@import "components/helpers";
+@import "components/visibility";
+@import "components/utility";
+@import "components/icons";
+
+/**
+ * Patterns
+ * objects that have children
+ */
+
+@import "patterns/grid";
+
+/**
+ * Views
+ * specific views
+ */

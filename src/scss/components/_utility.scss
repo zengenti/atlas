@@ -1,0 +1,55 @@
+/**
+ * Alignment classes
+ */
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+@include mq($until: medium) {
+    @include align-classes($size: small-only);
+}
+
+@include mq() {
+    @include align-classes($size: small);
+}
+
+@include mq(medium, large) {
+    @include align-classes($size: medium-only);
+}
+
+@include mq($from: medium) {
+    @include align-classes($size: medium);
+}
+
+@include mq(large, xlarge) {
+    @include align-classes($size: large-only);
+}
+
+@include mq($from: large) {
+    @include align-classes($size: large);
+}
+
+@include mq(xlarge, xxlarge) {
+    @include align-classes($size: xlarge-only);
+}
+
+@include mq($from: xlarge) {
+    @include align-classes($size: xlarge);
+}
+
+@include mq($from: xxlarge) {
+    @include align-classes($size: xxlarge);
+}

@@ -1,0 +1,80 @@
+/**
+ * Row
+ */
+
+.row {
+    @include clearfix;
+    margin: 0 auto;
+    max-width: $row-width;
+    width: 100%;
+
+    &.collapse {
+        > .column {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .row {
+        @include clearfix;
+        margin: 0 (-$column-gutter / 2);
+        max-width: none;
+        width: auto;
+
+        &.collapse {
+            @include clearfix;
+            margin: 0;
+            max-width: none;
+            width: auto;
+        }
+    }
+}
+
+/**
+ * Column
+ */
+
+.column {
+    position: relative;
+    padding-left: ($column-gutter / 2);
+    padding-right: ($column-gutter / 2);
+    width: 100%;
+    float: left;
+
+    + .column {
+        &:last-child {
+        	float: right;
+        }
+
+        &.end {
+        	float: left;
+        }
+    }
+
+    &.row {
+        &.row {
+            float: none;
+        }
+    }
+ }
+
+/**
+ * Grid HTML classes
+ */
+
+@include mq() {
+    @include grid-html-classes($size: small);
+}
+
+@include mq($from: medium) {
+    @include grid-html-classes($size: medium);
+}
+
+@include mq($from: large) {
+    @include grid-html-classes($size: large);
+}
