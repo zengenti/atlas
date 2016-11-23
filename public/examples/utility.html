@@ -8,12 +8,19 @@
     <title>Atlas &mdash; A modern front-end framework &mdash; Utility</title>
     <link rel="icon" href="../images/favicon.ico">
     <link href="../css/styles.css" rel="stylesheet">
-    <script src="../js/libs/modernizr-custom.js" rel="javascript"></script>
-    <script src="../js/libs/jquery.min.js" rel="javascript"></script>
-    <!--[if lt IE 9]>
-    <script src="../js/libs/respond.min.js" rel="javascript"></script>
-    <script src="../js/libs/rem.min.js" rel="javascript"></script>
-    <![endif]-->
+    <style>
+        .demo-panel {
+            font-size: 14px;
+            font-family:  Monaco, Consolas, "Liberation Mono", Courier, monospace;
+            margin-bottom: 10px;
+            border: solid 1px #000;
+            padding: 15px;
+        }
+
+        .demo-panel span {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -25,77 +32,71 @@
             </div>
 
             <div class="row column">
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                            <td><code>.text-left</code></td>
-                            <td><code>.text-right</code></td>
-                            <td><code>.text-center</code></td>
-                            <td><code>.text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.small-text-left</code></td>
-                            <td><code>.small-text-right</code></td>
-                            <td><code>.small-text-center</code></td>
-                            <td><code>.small-text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.small-only-text-left</code></td>
-                            <td><code>.small-only-text-right</code></td>
-                            <td><code>.small-only-text-center</code></td>
-                            <td><code>.small-only-text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.medium-text-left</code></td>
-                            <td><code>.medium-text-right</code></td>
-                            <td><code>.medium-text-center</code></td>
-                            <td><code>.medium-text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.medium-only-text-left</code></td>
-                            <td><code>.medium-only-text-right</code></td>
-                            <td><code>.medium-only-text-center</code></td>
-                            <td><code>.medium-only-text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.large-text-left</code></td>
-                            <td><code>.large-text-right</code></td>
-                            <td><code>.large-text-center</code></td>
-                            <td><code>.large-text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.large-only-text-left</code></td>
-                            <td><code>.large-only-text-right</code></td>
-                            <td><code>.large-only-text-center</code></td>
-                            <td><code>.large-only-text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.xlarge-text-left</code></td>
-                            <td><code>.xlarge-text-right</code></td>
-                            <td><code>.xlarge-text-center</code></td>
-                            <td><code>.xlarge-text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.xlarge-only-text-left</code></td>
-                            <td><code>.xlarge-only-text-right</code></td>
-                            <td><code>.xlarge-only-text-center</code></td>
-                            <td><code>.xlarge-only-text-justify</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>.xxlarge-text-left</code></td>
-                            <td><code>.xxlarge-text-right</code></td>
-                            <td><code>.xxlarge-text-center</code></td>
-                            <td><code>.xxlarge-text-justify</code></td>
-                        </tr>
-                    </tbody>
-                    <thead>
-                        <tr><td>Align Left</td>
-                        <td>Align Right</td>
-                        <td>Align Center</td>
-                        <td>Justify</td>
-                        </tr>
-                    </thead>
-                </table>
+                <h3>Align Left</h3>
+                <p class="demo-panel">
+                    <span>.text-left</span>
+                    <span>.small-text-left</span>
+                    <span>.small-only-text-left</span>
+                    <span>.medium-text-left</span>
+                    <span>.medium-only-text-left</span>
+                    <span>.large-text-left</span>
+                    <span>.large-only-text-left</span>
+                    <span>.xlarge-text-left</span>
+                    <span>.xlarge-only-text-left</span>
+                    <span>.xxlarge-text-left</span>
+                </p>
+            </div>
+
+            <div class="row column">
+                <h3>Align Right</h3>
+                <p class="demo-panel">
+                    <span>.text-right</span>
+                    <span>.small-text-right</span>
+                    <span>.small-only-text-right</span>
+                    <span>.medium-text-right</span>
+                    <span>.medium-only-text-right</span>
+                    <span>.large-text-right</span>
+                    <span>.large-only-text-right</span>
+                    <span>.xlarge-text-right</span>
+                    <span>.xlarge-only-text-right</span>
+                    <span>.xxlarge-text-right</span>
+                </p>
+            </div>
+
+            <div class="row column">
+                <h3>Align Center</h3>
+                <p class="demo-panel">
+                    <span>.text-center</span>
+                    <span>.small-text-center</span>
+                    <span>.small-only-text-center</span>
+                    <span>.medium-text-center</span>
+                    <span>.medium-only-text-center</span>
+                    <span>.large-text-center</span>
+                    <span>.large-only-text-center</span>
+                    <span>.xlarge-text-center</span>
+                    <span>.xlarge-only-text-center</span>
+                    <span>.xxlarge-text-center</span>
+                </p>
+            </div>
+
+            <div class="row column">
+                <h3>Justify</h3>
+                <p class="demo-panel">
+                    <span>.text-justify</span>
+                    <span>.small-text-justify</span>
+                    <span>.small-only-text-justify</span>
+                    <span>.medium-text-justify</span>
+                    <span>.medium-only-text-justify</span>
+                    <span>.large-text-justify</span>
+                    <span>.large-only-text-justify</span>
+                    <span>.xlarge-text-justify</span>
+                    <span>.xlarge-only-text-justify</span>
+                    <span>.xxlarge-text-justify</span>
+                </p>
+            </div>
+
+            <div class="row column">
+
             </div>
         </section>
     </main>
