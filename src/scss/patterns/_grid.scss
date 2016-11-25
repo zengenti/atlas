@@ -46,16 +46,6 @@
     width: 100%;
     float: left;
 
-    + .column {
-        &:last-child {
-        	float: right;
-        }
-
-        &.end {
-        	float: left;
-        }
-    }
-
     &.row {
         &.row {
             float: none;

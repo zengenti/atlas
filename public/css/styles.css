@@ -1336,14 +1336,6 @@ img {
   float: left;
 }
 
-.column + .column:last-child {
-  float: right;
-}
-
-.column + .column.end {
-  float: left;
-}
-
 .column.row.row {
   float: none;
 }
