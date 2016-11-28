@@ -6,6 +6,16 @@
  * "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
  */
 {
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "Modernizr": true,
+    "jQuery": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
   "rules": {
     "quotes": [2, "single"],
     "semi": [2, "always"]
