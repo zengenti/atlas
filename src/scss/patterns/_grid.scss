@@ -7,31 +7,31 @@
     margin: 0 auto;
     max-width: $row-width;
     width: 100%;
+}
 
-    &.collapse {
-        > .column {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .row {
-            margin-left: 0;
-            margin-right: 0;
-        }
+.row.collapse {
+    > .column {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.row .row {
+    @include clearfix;
+    margin: 0 (-$column-gutter / 2);
+    max-width: none;
+    width: auto;
+
+    &.collapse {
         @include clearfix;
-        margin: 0 (-$column-gutter / 2);
+        margin: 0;
         max-width: none;
         width: auto;
-
-        &.collapse {
-            @include clearfix;
-            margin: 0;
-            max-width: none;
-            width: auto;
-        }
     }
 }
 
@@ -47,9 +47,7 @@
     float: left;
 
     &.row {
-        &.row {
-            float: none;
-        }
+        float: none;
     }
  }
 
