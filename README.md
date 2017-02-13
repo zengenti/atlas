@@ -40,6 +40,8 @@ The tasks can be triggered individually:
   - [Browsersync][browser-sync] provides easy access to view your project on different devices by providing you with a dynamic URL
 
 ## JavaScript
+Add your JavaScript third party libraries into the `src/js/libs` directory to prevent the files from being linted by [ESLint][eslint].
+
   - [jQuery][jquery]
   - [Modernizr][modernizr]
   - [ESLint][eslint] configuration file for setting up error checking `.eslintrc`
