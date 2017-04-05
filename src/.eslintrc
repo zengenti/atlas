@@ -11,7 +11,8 @@
   },
   "globals": {
     "Modernizr": true,
-    "jQuery": true
+    "jQuery": true,
+    "$": true
   },
   "extends": [
     "eslint:recommended"
