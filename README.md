@@ -61,7 +61,7 @@ Add HTML pages to the `src/html/pages` folder, the HTML Gulp task (nunjucks) wil
   - Creating a new page requires the base layout to be rendered first with `{% extends "_layout.html" %}` then ensure the page content is wrapped with `{% block content %}{% endblock %}` (see the index.html page as an example).
   - Note: partials can have any naming convention as long as it's saved as a `.html` file. The default prepends partials with an underscore to clearly highlight partials but this is not a requirement.
 
-For more info about the syntax or how to include HTML variables and macros see the [nunjucks][nunjucks] site.  
+For more info about the syntax or how to include HTML variables and macros see the [nunjucks](https://mozilla.github.io/nunjucks/templating.html) site.  
 
 ## SVGs
 Add your SVGs into the `src/images/icons` directory and then use the SVG `<use>` element within your template that will reference the sprite at the top of the page.
@@ -84,4 +84,3 @@ Add your SVGs into the `src/images/icons` directory and then use the SVG `<use>`
 [polyfill-mq]: https://github.com/scottjehl/Respond
 [eslint]: http://eslint.org
 [browser-sync]: https://www.npmjs.com/package/browser-sync
-[nunjucks]: https://mozilla.github.io/nunjucks/
