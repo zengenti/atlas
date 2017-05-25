@@ -37,7 +37,6 @@ The tasks can be triggered individually:
   - JavaScript error checking and code quality control using [ESLint][eslint] with `.eslintrc` configuration file
   - Concatenate and minify JavaScript
   - Provides sourcemaps for both CSS and JavaScript files
-  - a
   - Minifies SVG files and removes any inline `fill` attributes to allow full CSS control
   - [Browsersync][browser-sync] provides easy access to view your project on different devices by providing you with a dynamic URL
 
