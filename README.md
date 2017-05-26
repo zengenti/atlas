@@ -27,11 +27,12 @@ The tasks can be triggered individually:
 
     gulp sass
     gulp js
+    gulp html
     gulp svg
     gulp serve
 
 ## Tools
-  - Livereload of the browser window when `.scss`, `.js`, `.jsx` and template files are edited
+  - Livereload of the browser window when `.scss`, `.js`, `.jsx` and `.html` files are edited
   - Error logging through the command prompt and notifications through your platform
   - JavaScript error checking and code quality control using [ESLint][eslint] with `.eslintrc` configuration file
   - Concatenate and minify JavaScript
@@ -52,6 +53,15 @@ Add your JavaScript third party libraries into the `src/js/libs` directory to pr
   - [Normalize.css](https://necolas.github.io/normalize.css)
   - 12 column grid
   - [MQ breakpoint mixin](https://github.com/sass-mq/sass-mq)
+
+## HTML
+Add HTML pages to the `src/html/pages` folder, the HTML Gulp task (nunjucks) will render every page added to that folder. Add any HTML partials/layouts to the `src/html/templates` folder. The default base layout page `_layout.html` already exists which also includes a `_header.html` and `_footer.html` partial which demonstrates the syntax used.
+
+  - Including a HTML partial `{% include "partials/_partial.html" %}`
+  - Creating a new page requires the base layout to be rendered first with `{% extends "_layout.html" %}` then ensure the page content is wrapped with `{% block content %}{% endblock %}` (see the index.html page as an example).
+  - Note: partials can have any naming convention as long as it's saved as a `.html` file. The default prepends partials with an underscore to clearly highlight partials but this is not a requirement.
+
+For more info about the syntax or how to include HTML variables and macros see the [nunjucks](https://mozilla.github.io/nunjucks/templating.html) site.  
 
 ## SVGs
 Add your SVGs into the `src/images/icons` directory and then use the SVG `<use>` element within your template that will reference the sprite at the top of the page.

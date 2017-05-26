@@ -18,28 +18,14 @@
 <body>
     <!-- inject:svg --><!-- endinject -->
 
-    <header>
-    <div class="row column">
-        <p>Header</p>
-    </div>
-</header>
+    {% include "partials/_header.html" %}
 
     <!-- You write code for this content block in another file -->
     <main id="main">
-  	     
-
-		<div class="row column">
-			<p>Content</p>
-		</div>
-
-
+  	     {% block content %}{% endblock %}
     </main>
 
-  	<footer>
-    <div class="row column">
-        <p>Footer</p>
-    </div>
-</footer>
+  	{% include "partials/_footer.html" %}
 
     <script src="js/app.min.js" rel="javascript"></script>
 </body>
