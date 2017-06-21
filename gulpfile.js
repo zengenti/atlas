@@ -3,13 +3,12 @@
  * Author: Zengenti Ltd
  * Author URI: http://zengenti.com
  * Description: A modern front-end framework
- * Version: 0.0.2
+ * Version: 0.0.1
  */
 
 // Paths
 var pathSass     = 'src/scss/';
 var pathJs       = 'src/js/';
-var pathHtml     = 'src/html/';
 var pathImg      = 'src/images/';
 
 // General
@@ -32,9 +31,6 @@ var uglify       = require('gulp-uglify');
 
 // SVG
 var svgSprite    = require('gulp-svg-sprite');
-
-// Module Build
-var nunjucksRender = require('gulp-nunjucks-render');
 
 /*
  * Scripts object
@@ -91,26 +87,6 @@ gulp.task('js', ['js-lint'], function() {
 gulp.task('js-watch', ['js'], browserSync.reload);
 
 /*
- * Nunjucks build
- */
-gulp.task('html', function() {
-  // Gets .html files in pages
-  return gulp.src('src/html/pages/**/*.html')
-  // Renders template with nunjucks
-  .pipe(nunjucksRender({
-      path: ['src/html/templates']
-    }))
-  // output files in app folder
-  .pipe(gulp.dest('public/'))
-});
-
-/*
- * HTML watch
- * Ensures the 'html' task is complete before reloading browsers
- */
-gulp.task('html-watch', ['html'], browserSync.reload);
-
-/*
  * SVG sprite
  */
 gulp.task('svg', function() {
@@ -146,7 +122,7 @@ gulp.task('svg', function() {
 /*
  * Serve
  */
-gulp.task('serve', ['sass', 'js', 'html', 'svg'], function() {
+gulp.task('serve', ['sass', 'js', 'svg'], function() {
   browserSync.init({
     server: {
       baseDir: './public'
@@ -156,10 +132,10 @@ gulp.task('serve', ['sass', 'js', 'html', 'svg'], function() {
 
   gulp.watch(pathSass + '**/*.scss', ['sass']);
   gulp.watch(pathJs + '**/*', ['js-watch']);
-  gulp.watch(pathHtml + '**/*', ['html-watch']);
+  gulp.watch('public/**/*.html', browserSync.reload);
 });
 
 /*
  * Tasks
  */
-gulp.task('default', ['sass', 'js', 'html', 'svg', 'serve'], browserSync.reload);
+gulp.task('default', ['sass', 'js', 'svg', 'serve'], browserSync.reload);
