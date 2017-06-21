@@ -3,7 +3,7 @@
  * Author: Zengenti Ltd
  * Author URI: http://zengenti.com
  * Description: A modern front-end framework
- * Version: 0.0.1
+ * Version: 0.0.2
  */
 /**
  * Utilities
@@ -1264,6 +1264,22 @@ img {
   height: auto;
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  background: #e9654c;
+  color: #fff;
+  padding: 1.25rem;
+}
+
+.skip-to-content:focus {
+  position: relative;
+  top: 0;
 }
 
 /**
