@@ -10,6 +10,7 @@
     <link href="{{ path }}css/styles.css" rel="stylesheet">
     <script src="{{ path }}js/libs/modernizr-custom.js" rel="javascript"></script>
     {% include "snippets/_ie-conditionals.html" %}
+    {% include "snippets/_domloadscript.html" %}
 </head>
 <body>
     <!-- inject:svg --><!-- endinject -->
@@ -22,8 +23,5 @@
     </main>
 
   	{% include "partials/_footer.html" %}
-
-    <script src="{{ path }}js/libs/jquery.min.js" rel="javascript"></script>
-    <script src="{{ path }}js/app.min.js" rel="javascript"></script>
 </body>
 </html>
