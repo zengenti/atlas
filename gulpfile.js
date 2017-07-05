@@ -10,6 +10,7 @@
 var pathSass     = 'src/scss/';
 var pathJs       = 'src/js/';
 var pathHtml     = 'src/html/';
+var baseHtmlLoc  = 'src/html/templates/';
 var pathImg      = 'src/images/';
 
 // General
@@ -136,17 +137,17 @@ gulp.task('svg', function() {
   }
 
   return gulp
-    .src('public/**/*.html')
+    .src(baseHtmlLoc +'_layout.html')
     .pipe(inject(svgs, {
       transform: fileContents
     }))
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest(baseHtmlLoc));
 });
 
 /*
  * Serve
  */
-gulp.task('serve', ['sass', 'js', 'html', 'svg'], function() {
+gulp.task('serve', ['sass', 'js', 'html'], function() {
   browserSync.init({
     server: {
       baseDir: './public'
@@ -162,4 +163,4 @@ gulp.task('serve', ['sass', 'js', 'html', 'svg'], function() {
 /*
  * Tasks
  */
-gulp.task('default', ['sass', 'js', 'html', 'svg', 'serve'], browserSync.reload);
+gulp.task('default', ['sass', 'js', 'svg', 'html', 'serve'], browserSync.reload);

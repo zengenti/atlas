@@ -1,7 +1,7 @@
 {
   "name": "atlas",
-  "version": "0.0.1",
-  "description": "A modern front-end framework",
+  "version": "0.0.2",
+  "description": "A modern front-end framework compiled with a template engine",
   "main": "gulpfile.js",
   "license": "MIT",
   "repository": {
