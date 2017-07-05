@@ -1,0 +1,15 @@
+.skip-to-content {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    background: $color-primary;
+    color: $white;
+    padding: rem-calc(20);
+
+    &:focus {
+        position: relative;
+        top: 0;
+    }
+}
