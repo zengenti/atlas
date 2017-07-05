@@ -3,9 +3,10 @@
     
     function theDomHasLoaded(e) {
         [
+            // The default scripts loaded on the page
             '../js/libs/jquery.min.js',
             '../js/app.min.js',
-            //add any further scripts to defer here
+            // add any further scripts to defer here
         ].forEach(function(src) {
             var script = document.createElement('script');
             script.src = src;
