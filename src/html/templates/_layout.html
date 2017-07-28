@@ -9,11 +9,8 @@
     {% include "snippets/_favicons.html" %}
     <link href="{{ path }}css/styles.css" rel="stylesheet">
     <script src="{{ path }}js/libs/modernizr-custom.js" rel="javascript"></script>
-    <script src="{{ path }}js/libs/jquery.min.js" rel="javascript"></script>
-    <!--[if lt IE 9]>
-    <script src="{{ path }}js/libs/respond.min.js" rel="javascript"></script>
-    <script src="{{ path }}js/libs/rem.min.js" rel="javascript"></script>
-    <![endif]-->
+    {% include "snippets/_ie-conditionals.html" %}
+    {% include "snippets/_domloadscript.html" %}
 </head>
 <body>
     <!-- inject:svg --><!-- endinject -->
@@ -26,7 +23,5 @@
     </main>
 
   	{% include "partials/_footer.html" %}
-
-    <script src="{{ path }}js/app.min.js" rel="javascript"></script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+table {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    caption {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 5px 0;
+        margin-bottom: 5px;
+        background: $color-primary;
+        color: $white;
+    }
+
+    tbody {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 5px 10px;
+        text-align: left;
+    }
+
+    tr:nth-child(even){
+        background: #f4f4f4;
+    }
+}
